@@ -2,6 +2,9 @@ name: "2.Build and push images"
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
   
 jobs:
   Building:

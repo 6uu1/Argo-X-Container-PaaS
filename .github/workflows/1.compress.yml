@@ -2,6 +2,10 @@ name: "1.Compress files"
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+
   
 jobs:
   Building:
