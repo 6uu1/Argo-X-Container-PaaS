@@ -19,8 +19,8 @@ jobs:
       steps:
       - name: Compress files
         run: |
-          git config --global user.email "${{ env.EMAIL }}"
-          git config --global user.name "${{ env.NAME }}"
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git clone https:///${{ env.TOKEN }}@github.com/${{github.repository}}.git
           cd $(echo ${{github.repository}} | awk -F'/' '{print $2}')
           tar czvf file.tar.gz web.js entrypoint.sh package.json server.js

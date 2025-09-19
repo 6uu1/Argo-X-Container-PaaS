@@ -2,7 +2,10 @@ name: "2.Build and push images"
 
 on:
   workflow_dispatch:
-  push:
+  workflow_run:
+    workflows: ["1.Compress files"]
+    types:
+      - completed
     branches:
       - main
   
